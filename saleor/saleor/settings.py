@@ -69,7 +69,7 @@ INTERNAL_IPS = get_list(os.environ.get("INTERNAL_IPS", "127.0.0.1"))
 
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgres://saleor:saleor@localhost:5432/saleor", conn_max_age=600
+        default="postgres://master:0823@localhost:5432/saleor", conn_max_age=600
     )
 }
 
@@ -158,7 +158,8 @@ TEMPLATES = [
 ]
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = os.environ.get("SECRET_KEY")
+#SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = 'django-insecure-9-z=5-7%t7c*mt43vd=o)((d7-lmu8f3huskai!jt=#f0drf15'
 
 if not SECRET_KEY and DEBUG:
     warnings.warn("SECRET_KEY not configured, using a random temporary key.")
